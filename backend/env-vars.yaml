@@ -1,0 +1,8 @@
+DATABASE_URL: sqlite:///./votequest.db
+SECRET_KEY: votequest-production-secret-key-change-me-minimum-32-characters
+JWT_ALGORITHM: HS256
+ACCESS_TOKEN_EXPIRE_MINUTES: "1440"
+CORS_ORIGINS: "http://localhost:3000,http://localhost:8000,https://votequest-frontend.netlify.app"
+ENVIRONMENT: production
+DEBUG: "false"
+GEMINI_API_KEY: your-gemini-api-key-here

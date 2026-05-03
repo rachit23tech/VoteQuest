@@ -1,0 +1,362 @@
+[
+  {
+    "state_code": "CA",
+    "state_name": "California",
+    "registration_deadline": "2024-10-21",
+    "early_voting_start": "2024-10-07",
+    "early_voting_end": "2024-11-04",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["Driver's license", "State ID", "Utility bill", "Bank statement", "Government mail"],
+      "notes": "No strict photo ID required. Last 4 of SSN or signature accepted."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Chinese", "Vietnamese", "Korean", "Tagalog", "Japanese", "Hindi", "Khmer"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "TX",
+    "state_name": "Texas",
+    "registration_deadline": "2024-10-07",
+    "early_voting_start": "2024-10-21",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["Texas Driver's license", "Texas ID card", "Texas concealed handgun license", "U.S. military ID", "U.S. passport", "U.S. citizenship certificate"],
+      "notes": "Strict photo ID required. Voters without photo ID may cast provisional ballot with reasonable impediment declaration."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "FL",
+    "state_name": "Florida",
+    "registration_deadline": "2024-10-07",
+    "early_voting_start": "2024-10-26",
+    "early_voting_end": "2024-11-02",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["Florida Driver's license", "Florida ID card", "U.S. passport", "Military ID", "Student ID with signature"],
+      "notes": "Photo and signature ID required. Must match signature on file."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Haitian Creole"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "NY",
+    "state_name": "New York",
+    "registration_deadline": "2024-10-26",
+    "early_voting_start": "2024-10-26",
+    "early_voting_end": "2024-11-03",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["NY Driver's license", "NY ID card", "Last 4 of SSN", "Utility bill", "Bank statement"],
+      "notes": "No strict photo ID. First-time voters must provide ID or last 4 of SSN."
+    },
+    "accessibility_rules": {
+      "curbside_voting": false,
+      "language_assistance": ["Spanish", "Chinese", "Korean", "Bengali", "Russian"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "PA",
+    "state_name": "Pennsylvania",
+    "registration_deadline": "2024-10-21",
+    "early_voting_start": "2024-09-16",
+    "early_voting_end": "2024-10-29",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["PA Driver's license", "PA ID card", "Last 4 of SSN", "Photo ID for first-time voters"],
+      "notes": "First-time voters need ID. Returning voters may use last 4 SSN or driver's license number."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "IL",
+    "state_name": "Illinois",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-09-26",
+    "early_voting_end": "2024-11-04",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["IL Driver's license", "IL ID", "Government document with name/address", "Utility bill", "Bank statement"],
+      "notes": "Same-day registration available. No strict photo ID requirement."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Chinese"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "OH",
+    "state_name": "Ohio",
+    "registration_deadline": "2024-10-07",
+    "early_voting_start": "2024-10-08",
+    "early_voting_end": "2024-11-04",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["OH Driver's license", "OH ID card", "Military ID", "U.S. passport", "OH interim ID"],
+      "notes": "Photo ID required. Voters without photo ID may cast provisional ballot and provide ID within 7 days."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "GA",
+    "state_name": "Georgia",
+    "registration_deadline": "2024-10-07",
+    "early_voting_start": "2024-10-15",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["GA Driver's license", "GA ID card", "Passport", "Military ID", "Tribal ID"],
+      "notes": "Strict photo ID required. Free state ID available for eligible voters."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "NC",
+    "state_name": "North Carolina",
+    "registration_deadline": "2024-10-11",
+    "early_voting_start": "2024-10-17",
+    "early_voting_end": "2024-11-02",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["NC Driver's license", "NC ID", "U.S. passport", "Military ID", "Tribal enrollment card"],
+      "notes": "Photo ID required. Reasonable impediment affidavit available if ID unavailable."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "MI",
+    "state_name": "Michigan",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-10-26",
+    "early_voting_end": "2024-11-03",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["MI Driver's license", "MI ID", "Photo ID", "Last 4 SSN for those without photo ID"],
+      "notes": "Same-day registration available. No photo ID required if voter signs affidavit."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Arabic"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "WA",
+    "state_name": "Washington",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-10-18",
+    "early_voting_end": "2024-11-05",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["WA Driver's license", "WA ID", "Last 4 SSN"],
+      "notes": "All-mail voting state. Ballots mailed automatically to registered voters. Same-day registration available."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Chinese", "Vietnamese", "Korean"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "AZ",
+    "state_name": "Arizona",
+    "registration_deadline": "2024-10-07",
+    "early_voting_start": "2024-10-09",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["AZ Driver's license", "AZ ID", "Tribal enrollment card", "U.S. passport", "Military ID"],
+      "notes": "Photo ID required at polls. Voters without ID may cast provisional ballot and provide ID within 5 days."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Navajo", "Apache"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "CO",
+    "state_name": "Colorado",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-10-14",
+    "early_voting_end": "2024-11-04",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["CO Driver's license", "CO ID", "Military ID", "U.S. passport", "Last 4 SSN"],
+      "notes": "All-mail voting state. Photo ID or last 4 SSN required for first-time voters."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "MN",
+    "state_name": "Minnesota",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-09-20",
+    "early_voting_end": "2024-11-04",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["MN Driver's license", "MN ID", "Military ID", "Vouched for by registered voter"],
+      "notes": "Same-day registration with photo ID or vouching system available."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Somali", "Hmong"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "OR",
+    "state_name": "Oregon",
+    "registration_deadline": "2024-10-15",
+    "early_voting_start": "2024-10-16",
+    "early_voting_end": "2024-11-05",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["OR Driver's license", "OR ID", "Last 4 SSN"],
+      "notes": "All-mail voting state. Ballots automatically mailed to registered voters."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "NV",
+    "state_name": "Nevada",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-10-19",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["NV Driver's license", "NV ID", "Military ID", "U.S. passport", "Voter registration card"],
+      "notes": "All registered voters automatically receive mail ballot. In-person voting also available."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "VA",
+    "state_name": "Virginia",
+    "registration_deadline": "2024-10-14",
+    "early_voting_start": "2024-09-20",
+    "early_voting_end": "2024-11-02",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["VA Driver's license", "VA ID", "U.S. passport", "Military ID", "Tribal ID"],
+      "notes": "Photo ID required. Free VA ID available. Voters without ID may cast provisional ballot."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Korean", "Vietnamese"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "WI",
+    "state_name": "Wisconsin",
+    "registration_deadline": "2024-11-05",
+    "early_voting_start": "2024-10-22",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": true,
+      "accepted_ids": ["WI Driver's license", "WI ID", "Military ID", "U.S. passport", "Tribal ID", "Student ID"],
+      "notes": "Strict photo ID. Student IDs accepted if issued by Wisconsin school with 2-year expiry."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "MA",
+    "state_name": "Massachusetts",
+    "registration_deadline": "2024-10-26",
+    "early_voting_start": "2024-10-19",
+    "early_voting_end": "2024-11-01",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["MA Driver's license", "MA ID", "Utility bill", "Bank statement", "Government document"],
+      "notes": "No photo ID required. First-time voters must provide ID or copy of document."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Portuguese", "Chinese"],
+      "audio_ballots": true
+    }
+  },
+  {
+    "state_code": "MD",
+    "state_name": "Maryland",
+    "registration_deadline": "2024-10-15",
+    "early_voting_start": "2024-10-24",
+    "early_voting_end": "2024-10-31",
+    "election_day": "2024-11-05",
+    "id_requirements": {
+      "strict_photo_id": false,
+      "accepted_ids": ["MD Driver's license", "MD ID", "Utility bill", "Bank statement", "Government document"],
+      "notes": "No photo ID required except for first-time voters who did not provide ID at registration."
+    },
+    "accessibility_rules": {
+      "curbside_voting": true,
+      "language_assistance": ["Spanish", "Chinese", "Korean"],
+      "audio_ballots": true
+    }
+  }
+]

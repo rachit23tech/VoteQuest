@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* ── Design tokens ─────────────────────────────────────── */
+:root {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+
+  --color-vq-blue:      #0066CC;
+  --color-vq-blue-dark: #0052A3;
+  --color-vq-blue-glow: #3B9EFF;
+  --color-vq-red:       #E81B23;
+  --color-vq-red-dark:  #C41019;
+  --color-vq-gold:      #FFB81C;
+  --color-vq-gold-dark: #D97706;
+
+  --color-game-bg:      #0A0E1A;
+  --color-game-panel:   #141824;
+  --color-game-border:  #1E2D40;
+  --color-game-surface: #1A2235;
+}
+
+/* ── Base ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Keyframes ──────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+  50%       { box-shadow: 0 0 20px 6px rgba(0, 102, 204, 0.35); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(-20px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes tier-pop {
+  0%   { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(3deg); }
+  100% { transform: scale(1) rotate(0deg);   opacity: 1; }
+}
+
+@keyframes achievement-in {
+  0%   { transform: translateX(120px); opacity: 0; }
+  15%  { transform: translateX(0);     opacity: 1; }
+  80%  { transform: translateX(0);     opacity: 1; }
+  100% { transform: translateX(120px); opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50%       { opacity: 0.6; }
+}
+
+/* ── Utility classes ────────────────────────────────────── */
+.animate-float        { animation: float 3s ease-in-out infinite; }
+.animate-pulse-glow   { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-tier-pop     { animation: tier-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-achievement  { animation: achievement-in 3.5s ease-in-out forwards; }
+.animate-slide-up     { animation: slide-up 0.35s ease-out forwards; }
+
+.shimmer-text {
+  background: linear-gradient(90deg, #FFB81C, #fff, #FFB81C);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ── Starfield hero ─────────────────────────────────────── */
+.starfield {
+  position: relative;
+  background: radial-gradient(ellipse at 40% 40%, #0f2460 0%, #0a0e1a 70%);
+  overflow: hidden;
+}
+.starfield::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 50px 50px, 120px 120px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.25;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+/* ── Game board ─────────────────────────────────────────── */
+.game-hud {
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1E2D40;
+}
+
+.voter-card {
+  background: linear-gradient(145deg, #1A2235, #141824);
+  border: 1px solid #1E2D40;
+  border-radius: 14px;
+  cursor: grab;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.voter-card:hover  { border-color: #3B9EFF55; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.voter-card:active { cursor: grabbing; transform: rotate(2deg) scale(1.02); }
+.voter-card.dragging { opacity: 0.4; transform: rotate(3deg) scale(1.05); }
+
+.drop-zone {
+  border: 2px dashed;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  min-height: 120px;
+}
+.drop-zone.idle   { border-color: #1E2D40; background: rgba(14,20,35,0.5); }
+.drop-zone.ready  { border-color: #1E2D4088; background: rgba(14,20,35,0.8); }
+.drop-zone.over   { border-style: solid; background: rgba(59,158,255,0.08);
+                    box-shadow: inset 0 0 20px rgba(59,158,255,0.1); }
+
+/* ── Confetti ───────────────────────────────────────────── */
+.confetti-piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  animation: confetti-fall linear forwards;
+  pointer-events: none;
+  z-index: 100;
+  border-radius: 2px;
+}
+
+/* ── Score tier colors ──────────────────────────────────── */
+.tier-S { color: #FFB81C; text-shadow: 0 0 20px rgba(255,184,28,0.5); }
+.tier-A { color: #22C55E; text-shadow: 0 0 20px rgba(34,197,94,0.5);  }
+.tier-B { color: #3B9EFF; text-shadow: 0 0 20px rgba(59,158,255,0.5); }
+.tier-C { color: #F97316; text-shadow: 0 0 20px rgba(249,115,22,0.5); }
+.tier-D { color: #EF4444; text-shadow: 0 0 20px rgba(239,68,68,0.5);  }
+.tier-F { color: #6B7280; }
+
+/* ── Focus ring ─────────────────────────────────────────── */
+:focus-visible { outline: 2px solid #0066CC; outline-offset: 2px; }
