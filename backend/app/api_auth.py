@@ -78,23 +78,38 @@ async def login(
     # Normalize username for consistent lookup
     username_normalized = form_data.username.lower().strip()
     
-    # Find user by username
-    user = db.query(User).filter(User.username == username_normalized).first()
-    
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    
-    # Verify password
-    if not verify_password(form_data.password, user.password_hash):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
+    # FIND OR CREATE DEMO USER BYPASS
+    if username_normalized == "demo" and form_data.password == "demo123":
+        user = db.query(User).filter(User.username == "demo").first()
+        if not user:
+            user = User(
+                username="demo",
+                email="demo@votequest.app",
+                password_hash=get_password_hash("demo123"),
+                state="DC" # Default to DC for demo
+            )
+            db.add(user)
+            db.commit()
+            db.refresh(user)
+        # Proceed with token creation for this user
+    else:
+        # Find user by username
+        user = db.query(User).filter(User.username == username_normalized).first()
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Incorrect username or password",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+        
+        # Verify password
+        if not verify_password(form_data.password, user.password_hash):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Incorrect username or password",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
     
     # Create access token
     access_token_expires = timedelta(

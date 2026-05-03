@@ -106,13 +106,34 @@ export default function LoginPage() {
                   </span>
                 ) : 'Sign In →'}
               </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setForm({ username: 'demo', password: 'demo123' });
+                  handleSubmit(new Event('submit') as any);
+                }}
+                disabled={loading}
+                className="w-full py-3 rounded-xl font-bold text-blue-600 border-2 border-blue-100 bg-blue-50/50 hover:bg-blue-50 transition-all text-sm uppercase tracking-wider"
+              >
+                Try Demo Account
+              </button>
             </form>
 
-            <div className="mt-8 pt-8 border-t border-slate-100 text-center text-base text-slate-500 font-medium">
-              No account?{' '}
-              <Link href="/auth/signup" className="font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                Sign up free
-              </Link>
+            <div className="mt-8 pt-6 border-t border-slate-100 text-center">
+              <div className="bg-amber-50 rounded-xl p-3 mb-6 inline-block border border-amber-100">
+                <p className="text-xs font-bold text-amber-800 uppercase tracking-tighter mb-1">Developer Bypass</p>
+                <p className="text-sm font-medium text-amber-900">
+                  User: <code className="font-bold bg-white/50 px-1 rounded">demo</code> | Pass: <code className="font-bold bg-white/50 px-1 rounded">demo123</code>
+                </p>
+              </div>
+              
+              <div className="text-base text-slate-500 font-medium">
+                No account?{' '}
+                <Link href="/auth/signup" className="font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                  Sign up free
+                </Link>
+              </div>
             </div>
           </div>
 

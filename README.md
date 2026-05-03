@@ -2,11 +2,10 @@
 
 > An interactive, gamified platform to teach election processes, timelines, and civic engagement through gameplay. Transform voters into election strategists.
 
-**Status**: Phase 2 Complete — Level 1 fully playable end-to-end | Auth system fixed | TypeScript types updated  
-**Timeline**: 4-6 weeks for MVP  
-**Tech Stack**: React 18+ (Next.js 14+) with TypeScript | FastAPI | PostgreSQL  
-**Target Users**: High school students, first-time voters, civics classes  
-**Last Updated**: May 2, 2026
+**Status**: 🚀 Phase 2 Complete — Fully functional end-to-end | Premium UI | GCP Deployed  
+**Tech Stack**: Next.js 15+ | FastAPI | PostgreSQL | Google Cloud Run  
+**Live Backend**: [VoteQuest API](https://votequest-api-393608700696.us-central1.run.app)  
+**Last Updated**: May 3, 2026
 
 ---
 
@@ -718,21 +717,19 @@ docker-compose up -d
 
 ---
 
-## 🚢 Deployment Strategy
-
-### Frontend (Vercel)
+### Frontend (Netlify / Vercel)
+The frontend is optimized for static hosting.
 ```bash
-npm install -g vercel
-vercel link
-vercel deploy --prod
+# Build
+npm run build
+# Deploy 'out' directory to Netlify or Vercel
 ```
 
-### Backend (Railway)
-```bash
-# Connect GitHub repo to Railway
-# Set environment variables
-# Auto-deploy on push to main
-```
+### Backend (Google Cloud Run)
+Deployed on Google Cloud Run for scalability and reliability.
+- **Service URL**: `https://votequest-api-393608700696.us-central1.run.app`
+- **Region**: `us-central1`
+- **Database**: Google Cloud SQL (PostgreSQL)
 
 ### Database (Managed PostgreSQL)
 - Railway managed PostgreSQL or
@@ -830,4 +827,5 @@ Contributions welcome! Please see CONTRIBUTING.md for guidelines.
 ---
 
 **Last Updated**: April 25, 2026  
-**Version**: 1.0.0-alpha (Level 1 playable)
+**Last Updated**: May 3, 2026  
+**Version**: 1.0.0 (Production-Ready Backend)
