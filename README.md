@@ -1,34 +1,34 @@
-# VoteQuest - Gamified Election Assistant
+# VoteQuest — Gamified Election Assistant
 
 > An interactive, gamified platform to teach election processes, timelines, and civic engagement through gameplay. Transform voters into election strategists.
 
-**Status**: 🚀 Phase 2 Complete — Fully functional end-to-end | Premium UI | GCP Deployed  
-**Tech Stack**: Next.js 15+ | FastAPI | PostgreSQL | Google Cloud Run  
-**Live Backend**: [VoteQuest API](https://votequest-api-393608700696.us-central1.run.app)  
-**Last Updated**: May 3, 2026
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Frontend-blue?style=for-the-badge)](https://willowy-pie-72be93.netlify.app/)
+[![API Status](https://img.shields.io/badge/API-Live_on_Cloud_Run-green?style=for-the-badge)](https://votequest-api-393608700696.us-central1.run.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
+
+**Tech Stack**: Next.js 15+ | FastAPI | PostgreSQL | Google Cloud Run
 
 ---
 
 ## 🎮 Project Vision
 
-Most election resources are dry, static, and forgettable. **VoteQuest** gamifies the learning experience—users progress through levels as virtual campaign managers, earning points and badges while mastering real election processes.
-
-### Recent Fixes & Improvements (May 2, 2026)
-
-✅ **TypeScript Type System**: Added `@types/react` and `@types/react-dom` for complete TypeScript support across all React components  
-✅ **Authentication**: Fixed OAuth2PasswordRequestForm login credentials format - now sends properly formatted URLSearchParams  
-✅ **Database**: Automatic table creation on server startup prevents registration/login failures  
-✅ **Type Annotations**: All React hooks and callbacks now have explicit type annotations to eliminate implicit `any` types  
-✅ **Frontend Components**: All four game levels (Level1-4) components created with proper TypeScript interfaces  
+Most election resources are dry, static, and forgettable. **VoteQuest** gamifies the learning experience — users progress through levels as virtual campaign managers, earning points and badges while mastering real election processes.
 
 ### What Makes It Stand Out
 
-✅ **Interactive** - Drag-and-drop, puzzle-based learning  
-✅ **Personalized** - State-specific rules embedded in gameplay  
-✅ **Engaging** - Points, badges, leaderboards, time pressure  
-✅ **Educational** - Master real deadlines, requirements, logistics  
-✅ **Shareable** - Compete with friends, viral potential  
-✅ **Mobile-First** - Works on any device  
+- **Interactive** — Drag-and-drop, puzzle-based learning
+- **Personalized** — State-specific rules embedded in gameplay
+- **Engaging** — Points, badges, leaderboards, time pressure
+- **Educational** — Master real deadlines, requirements, logistics
+- **Shareable** — Compete with friends, viral potential
+- **Mobile-First** — Works on any device
+
+---
+
+## 🔗 Live Deployments
+
+- **Frontend**: [https://willowy-pie-72be93.netlify.app/](https://willowy-pie-72be93.netlify.app/)
+- **Backend API**: [https://votequest-api-393608700696.us-central1.run.app](https://votequest-api-393608700696.us-central1.run.app)
 
 ---
 
@@ -36,7 +36,7 @@ Most election resources are dry, static, and forgettable. **VoteQuest** gamifies
 
 ### Core Gameplay (MVP)
 
-#### **Level 1: Voter Registration Challenge** (Weeks 2-3)
+#### **Level 1: Voter Registration Challenge**
 - **Mechanics**: Drag voter profiles to correct registration centers
 - **Duration**: 3-minute timer
 - **Challenge**: 8/10 voters must be registered correctly
@@ -44,17 +44,17 @@ Most election resources are dry, static, and forgettable. **VoteQuest** gamifies
 - **Scoring**: Base 100 + time bonus + accuracy multiplier
 - **Learning Outcome**: Understand registration deadlines and requirements
 
-#### **Level 2: Campaign Trail** (Post-MVP)
+#### **Level 2: Campaign Trail** *(Post-MVP)*
 - Resource management (budget, volunteers, time)
 - Navigate state-specific voting rules
 - Boss battle: Debate opponent with election trivia
 
-#### **Level 3: Get Out The Vote (GOTV)** (Post-MVP)
+#### **Level 3: Get Out The Vote (GOTV)** *(Post-MVP)*
 - Early voting mechanics puzzle
 - Polling place logistics challenges
 - Day-of problem-solving scenarios
 
-#### **Level 4: Election Night** (Post-MVP)
+#### **Level 4: Election Night** *(Post-MVP)*
 - Results calculation mechanics
 - Vote counting process simulation
 - Final scoring and achievements
@@ -64,7 +64,7 @@ Most election resources are dry, static, and forgettable. **VoteQuest** gamifies
 ## 🏆 Gamification Elements
 
 | Feature | Implementation |
-|---------|-----------------|
+|---------|----------------|
 | **Points System** | +100 base per level, +time bonus, +accuracy multiplier |
 | **Achievements** | 6 badges: "First Vote", "Early Bird", "Accessibility Champion", "On Fire", "All States Master", "Speed Racer" |
 | **Leaderboard** | Global top 10, weekly rankings, state-by-state competition |
@@ -76,12 +76,12 @@ Most election resources are dry, static, and forgettable. **VoteQuest** gamifies
 
 ### Achievement Badges
 
-- 🏆 **"First Vote"** - Complete Level 1
-- ⏰ **"Early Bird"** - Register 30+ days early  
-- 👥 **"Accessibility Champion"** - Help all voters with accessibility needs
-- 🔥 **"On Fire"** - 5-level streak without mistakes
-- 🌍 **"All States Master"** - Complete levels in all 50 states
-- ⚡ **"Speed Racer"** - Complete level in <2 minutes
+- 🏆 **"First Vote"** — Complete Level 1
+- ⏰ **"Early Bird"** — Register 30+ days early
+- 👥 **"Accessibility Champion"** — Help all voters with accessibility needs
+- 🔥 **"On Fire"** — 5-level streak without mistakes
+- 🌍 **"All States Master"** — Complete levels in all 50 states
+- ⚡ **"Speed Racer"** — Complete level in under 2 minutes
 
 ---
 
@@ -89,23 +89,23 @@ Most election resources are dry, static, and forgettable. **VoteQuest** gamifies
 
 ### Frontend
 ```
-Framework:        Next.js 14+ (React 18+)
-Language:         TypeScript with full type support (@types/react @types/react-dom)
+Framework:        Next.js 15+ (React 18+)
+Language:         TypeScript
 Styling:          Tailwind CSS + Framer Motion
 State Management: Zustand (game state) + React Query (server state)
 Game Mechanics:   Konva.js (drag-and-drop), react-beautiful-dnd
 Testing:          Vitest + React Testing Library
-Deployment:       Vercel
+Deployment:       Netlify
 ```
 
 ### Backend
 ```
-Framework:        FastAPI (Python 3.10+) with automatic table creation on startup
+Framework:        FastAPI (Python 3.10+)
 Database:         PostgreSQL + SQLAlchemy ORM
-Authentication:   JWT (stateless) with OAuth2PasswordRequestForm validation
+Authentication:   JWT (stateless) with OAuth2PasswordRequestForm
 Validation:       Pydantic
 Testing:          pytest
-Deployment:       Railway / Heroku / AWS
+Deployment:       Google Cloud Run
 ```
 
 ### Database
@@ -120,7 +120,7 @@ Migrations:       Alembic
 ## 🗂️ Project Structure
 
 ```
-election-game/
+votequest/
 │
 ├── frontend/                          # Next.js App
 │   ├── next.config.js
@@ -192,52 +192,32 @@ election-game/
 │           └── globals.css
 │
 ├── backend/                           # FastAPI App
-│   ├── main.py                        # App entry point
-│   ├── requirements.txt               # Python dependencies
-│   ├── .env                           # Environment variables
+│   ├── main.py
+│   ├── requirements.txt
 │   ├── .env.example
 │   │
 │   ├── app/
-│   │   ├── main.py                    # FastAPI setup
-│   │   ├── config.py                  # Configuration
-│   │   ├── database.py                # Database connection
-│   │   │
+│   │   ├── main.py
+│   │   ├── config.py
+│   │   ├── database.py
 │   │   ├── api/
-│   │   │   ├── __init__.py
-│   │   │   ├── auth.py                # Auth endpoints
-│   │   │   ├── game.py                # Game logic endpoints
-│   │   │   ├── leaderboard.py         # Leaderboard endpoints
-│   │   │   └── states.py              # Election data endpoints
-│   │   │
+│   │   │   ├── auth.py
+│   │   │   ├── game.py
+│   │   │   ├── leaderboard.py
+│   │   │   └── states.py
 │   │   ├── models/
-│   │   │   ├── __init__.py
-│   │   │   ├── user.py                # User model
-│   │   │   ├── game.py                # GameSession model
-│   │   │   ├── score.py               # Score model
-│   │   │   └── achievement.py         # Achievement model
-│   │   │
-│   │   ├── schemas/
-│   │   │   ├── __init__.py
-│   │   │   ├── user.py                # Pydantic schemas
+│   │   │   ├── user.py
 │   │   │   ├── game.py
 │   │   │   ├── score.py
 │   │   │   └── achievement.py
-│   │   │
+│   │   ├── schemas/
 │   │   ├── utils/
-│   │   │   ├── __init__.py
-│   │   │   ├── scoring.py             # Scoring algorithm
-│   │   │   ├── validation.py          # Game validation logic
-│   │   │   └── auth.py                # JWT helpers
-│   │   │
+│   │   │   ├── scoring.py
+│   │   │   ├── validation.py
+│   │   │   └── auth.py
 │   │   └── crud/
-│   │       ├── __init__.py
-│   │       ├── user.py                # User CRUD operations
-│   │       ├── game.py                # Game CRUD operations
-│   │       └── score.py               # Score CRUD operations
 │   │
 │   ├── migrations/
-│   │   └── (Alembic migration files)
-│   │
 │   ├── tests/
 │   │   ├── test_auth.py
 │   │   ├── test_game.py
@@ -245,18 +225,16 @@ election-game/
 │   │   └── conftest.py
 │   │
 │   └── data/
-│       └── election_data.json         # Seed data for all 50 states
+│       └── election_data.json        # Seed data for all 50 states
 │
-├── docker-compose.yml                 # Development environment
+├── docker-compose.yml
 ├── .gitignore
-└── README.md                          # This file
+└── README.md
 ```
 
 ---
 
 ## 🗄️ Database Schema
-
-### Core Tables
 
 #### `users`
 ```sql
@@ -326,20 +304,20 @@ def calculate_score(
     total_answers: int,
     accessibility_bonus: bool = False
 ) -> int:
-    
+
     # Time bonus: Up to +100 points for finishing under 3 minutes
     time_bonus = max(0, (300 - time_taken) / 3)
-    
+
     # Accuracy multiplier (0 to 1)
     accuracy_multiplier = correct_answers / total_answers
-    
+
     # Base calculation
     score = (base_points * accuracy_multiplier) + time_bonus
-    
+
     # Accessibility bonus: +50 points for inclusive gameplay
     if accessibility_bonus:
         score += 50
-    
+
     return int(score)
 ```
 
@@ -355,181 +333,100 @@ def calculate_score(
 
 ## 🚀 Development Phases
 
-### Phase 1: Project Setup & Infrastructure (Week 1) ✅ COMPLETED
-**Frontend Setup**
+### Phase 1: Project Setup & Infrastructure ✅ COMPLETED
 - [x] Initialize Next.js with TypeScript
 - [x] Configure Tailwind CSS + Prettier + ESLint
 - [x] Setup Zustand store structure
-- [x] Create API client wrapper
-- [x] Configure environment variables
-- [x] Install @types/react and @types/react-dom for full TypeScript support
-
-**Backend Setup**
-- [x] Initialize FastAPI project
-- [x] Configure SQLAlchemy + PostgreSQL
-- [x] Setup CORS, logging, error handling
-- [x] Create Pydantic schemas
+- [x] Initialize FastAPI project with SQLAlchemy + PostgreSQL
 - [x] Configure JWT authentication with automatic table creation
-
-**Database**
-- [x] Define all models
-- [x] Create Alembic migrations
 - [x] Seed election data (50 states)
-- [x] Create test database
 
-### Phase 2: Core Game Engine (Weeks 2-3) ✅ COMPLETED
-**Backend Game Logic**
+### Phase 2: Core Game Engine ✅ COMPLETED
 - [x] Implement `/api/game/start` endpoint
 - [x] Build scoring calculation engine
-- [x] Create game validation logic
-- [x] Implement achievement checking
-- [x] Setup leaderboard queries
-- [x] Fixed OAuth2PasswordRequestForm login credentials format
+- [x] Implement achievement checking and leaderboard queries
+- [x] Build GameContainer and all four Level components
+- [x] Implement drag-and-drop mechanics, timer, and results screen
+- [x] Full TypeScript type coverage across all React components
 
-**Frontend Game Architecture**
-- [x] Build GameContainer component
-- [x] Create Level1_Registration component
-- [x] Create Level2_Campaign component
-- [x] Create Level3_GOTV component
-- [x] Create Level4_ElectionNight component
-- [x] Implement drag-and-drop mechanics
-- [x] Build timer component with countdown
-- [x] Create points tracking system
-- [x] Build results screen
-- [x] Fixed TypeScript type annotations for React hooks and callbacks
+### Phase 3: Gamification Features 🔄 IN PROGRESS
+- [x] Points calculation and achievement unlock logic
+- [x] Global and state-by-state leaderboard API
+- [ ] Leaderboard UI components
+- [ ] Badge display system
+- [ ] Game state save/load to database
 
-### Phase 3: Gamification Features (Weeks 3-4) 🔄 IN PROGRESS
-**Points & Achievements**
-- [x] Implement points calculation in backend
-- [x] Create achievement unlock logic
-- [x] Build achievement popup animations
-- [ ] Create badge display system
+### Phase 4: Frontend UI & Polish 🔄 IN PROGRESS
+- [x] Home/splash page, auth pages, level gameplay pages, results screen
+- [x] Reusable component library
+- [ ] Game hub page, leaderboard page, profile/stats page
+- [ ] Dark mode, level transition animations, toast notifications
 
-**Leaderboard**
-- [x] Implement global leaderboard API
-- [x] Implement state-by-state rankings
-- [ ] Create leaderboard UI components
-- [ ] Add real-time score updates
+### Phase 5: State Data & Integration
+- [x] All 50 states populated with real election data
+- [x] State-specific rule engine
+- [ ] Voter profile generator, election trivia database
 
-**User Progression**
-- [ ] Save/load game state to DB
-- [ ] Implement resume functionality
-- [ ] Create user stats page
-- [ ] Track gameplay history
-
-### Phase 4: Frontend UI & Polish (Weeks 4-5) 🔄 IN PROGRESS
-**Design System**
-- [x] Create Tailwind color palette
-- [x] Build reusable component library
-- [ ] Implement dark mode support
-- [ ] Create typography system
-
-**Pages & Navigation**
-- [x] Home/splash page
-- [x] Auth pages (login/signup)
-- [ ] Game hub page
-- [x] Level gameplay pages
-- [x] Results screen
-- [ ] Leaderboard page
-- [ ] Profile/stats page
-- [ ] About/rules page
-
-**Animations & UX**
-- [ ] Level transition animations
-- [ ] Achievement unlock confetti
-- [x] Smooth drag-and-drop feedback
-- [ ] Loading skeletons
-- [ ] Toast notifications
-
-### Phase 5: State Data & Integration (Week 5-6)
-**Election Data Population**
-- [x] Populate 50 states with real data
-- [ ] Create voter profile generator
-- [x] Setup state-specific rule engine
-- [ ] Create election trivia database
-
-**API Endpoints**
-- [x] GET /api/states - all states
-- [x] GET /api/states/{state_code} - specific state
-- [x] GET /api/voters - random voter profiles
-- [ ] GET /api/election-facts - trivia questions
-
-### Phase 6: Testing & Deployment (Week 6)
-**Backend Testing**
-- [ ] Unit tests for scoring logic
-- [ ] Integration tests for game flow
-- [ ] Database transaction tests
-- [ ] API endpoint tests
-
-**Frontend Testing**
-- [ ] Component snapshot tests
-- [ ] User interaction tests
-- [ ] Game state transition tests
-- [ ] Integration tests
-
-**Deployment**
-- [ ] Setup Vercel deployment for frontend
-- [ ] Setup Railway/Heroku for backend
-- [ ] Configure production environment
-- [ ] Setup monitoring and logging
-- [ ] Create CI/CD pipeline
+### Phase 6: Testing & Deployment
+- [ ] Unit + integration tests (backend: pytest, frontend: Vitest)
+- [ ] E2E tests with Playwright
+- [ ] CI/CD pipeline
 
 ---
 
-## 📊 MVP Success Criteria
+## 📊 MVP Status
 
-Before moving to post-MVP features, the following must be complete:
-
-✅ **Level 1** fully playable end-to-end  
-✅ **Level 2, 3, 4** component structure in place  
-✅ **User authentication** (register/login/logout)  
-✅ **Scoring system** accurate and fair  
-✅ **TypeScript** full type coverage (no implicit `any`)  
-⏳ **Leaderboard** shows top 10 scores (API ready, UI pending)  
-⏳ **3+ achievements** unlockable (logic ready, UI pending)  
-⏳ **Mobile responsive** (works on all screen sizes - needs testing)  
-⏳ **Performance** (<2s initial load - needs optimization)  
-✅ **All 50 states** have election data  
-⏳ **Testing** (>80% code coverage - needs test suite)  
-⏳ **Deployment** live on Vercel + Railway (pending)  
+| Milestone | Status |
+|-----------|--------|
+| Level 1 fully playable | ✅ Done |
+| Level 2–4 component structure | ✅ Done |
+| User authentication | ✅ Done |
+| Scoring system | ✅ Done |
+| Full TypeScript coverage | ✅ Done |
+| All 50 states with election data | ✅ Done |
+| Frontend deployed | ✅ Live |
+| Backend deployed | ✅ Live |
+| Leaderboard UI | ⏳ Pending |
+| Achievement badge display | ⏳ Pending |
+| Mobile responsiveness testing | ⏳ Pending |
+| Test suite (>80% coverage) | ⏳ Pending |
 
 ---
 
-## 📈 API Endpoints (Backend)
+## 📈 API Endpoints
 
 ### Authentication
 ```
-POST   /api/auth/register          # Create new user
-POST   /api/auth/login             # User login (returns JWT)
-POST   /api/auth/logout            # User logout
-GET    /api/auth/me                # Current user info (requires JWT)
+POST   /api/auth/register
+POST   /api/auth/login
+POST   /api/auth/logout
+GET    /api/auth/me
 ```
 
 ### Game Management
 ```
-POST   /api/game/start             # Start new game session
-GET    /api/game/session/{id}      # Get game session details
-POST   /api/game/level/{level}/submit   # Submit level completion
-POST   /api/game/level/{level}/action   # Execute game action
-GET    /api/game/history           # Get user's game history
+POST   /api/game/start
+GET    /api/game/session/{id}
+POST   /api/game/level/{level}/submit
+POST   /api/game/level/{level}/action
+GET    /api/game/history
 ```
 
 ### Scoring & Achievements
 ```
-GET    /api/leaderboard            # Global top 10 scores
-GET    /api/leaderboard/weekly     # Weekly rankings
-GET    /api/leaderboard/state/{state}   # State rankings
-GET    /api/achievements           # Get user's achievements
-POST   /api/achievements/check     # Check achievement unlock
-GET    /api/stats                  # Get user statistics
+GET    /api/leaderboard
+GET    /api/leaderboard/weekly
+GET    /api/leaderboard/state/{state}
+GET    /api/achievements
+GET    /api/stats
 ```
 
 ### Election Data
 ```
-GET    /api/states                 # All states with election info
-GET    /api/states/{state}         # Specific state details
-GET    /api/voters/generate        # Generate random voter profiles
-GET    /api/election-facts         # Trivia questions/facts
+GET    /api/states
+GET    /api/states/{state}
+GET    /api/voters/generate
+GET    /api/election-facts
 ```
 
 ---
@@ -570,9 +467,9 @@ User lands on /           → Splash page
   │  │ Feedback: ✓ green / ✗ red per placement              │
   │  │ Submit early after 8+ placements OR wait for timer   │
   │  └──────────────────────────────────────────────────────┘
-  ↓ level complete (time up or 10/10 placed)
+  ↓ level complete
 /game/results             → Score tier (S/A/B/C/D/F), accuracy, time, achievements
-  ↓ "Play Again" or "Game Hub"
+  ↓
 /leaderboard              → Global / weekly rankings
 /profile                  → Stats, achievement badges
 ```
@@ -583,18 +480,16 @@ User lands on /           → Splash page
 
 ```typescript
 interface VoterProfile {
-  id: string;               // "v1" .. "v10"
-  name: string;             // Display name
-  age: number;              // Affects eligibility hints
-  emoji: string;            // Avatar emoji
-  situation: string;        // Short tag: "College student", "Elderly, homebound"
-  detail: string;           // One-line context: "Has valid ID and internet access."
-  answer: 'online' | 'mail' | 'in-person';  // Correct registration method
-  hint: string;             // Educational explanation shown on click
+  id: string;
+  name: string;
+  age: number;
+  emoji: string;
+  situation: string;
+  detail: string;
+  answer: 'online' | 'mail' | 'in-person';
+  hint: string;
 }
 ```
-
-### Registration Zone Decision Logic
 
 | Situation | Correct Zone | Reason |
 |-----------|-------------|--------|
@@ -604,36 +499,6 @@ interface VoterProfile {
 | Expired / lost ID | In-Person | Staff assistance needed |
 | Language assistance needed | In-Person | Bilingual staff available |
 | Overseas military (UOCAVA) | Mail-In | Federal provision |
-
----
-
-## � Known Issues & Next Steps
-
-### Current Blockers
-1. **Leaderboard UI Components**: API endpoints exist but UI components need to be built
-2. **Achievement Badge Display**: Logic complete but UI components pending  
-3. **Game State Persistence**: Players cannot resume games after leaving
-4. **Level 2-4 Gameplay Logic**: Components exist but game mechanics need implementation
-
-### Immediate Next Steps (Priority Order)
-1. [ ] Build LeaderboardTable UI component (HIGH)
-2. [ ] Implement game state save/load to database (HIGH)
-3. [ ] Add game-level UI components for Levels 2-4 (HIGH)
-4. [ ] Create comprehensive test suite (MEDIUM)
-5. [ ] Optimize frontend bundle size (MEDIUM)
-6. [ ] Setup CI/CD pipeline (MEDIUM)
-7. [ ] Add real-time leaderboard updates via WebSocket (LOW)
-
----
-
-## �🔒 Security Notes
-
-- **JWT tokens**: 24-hour expiry (`ACCESS_TOKEN_EXPIRE_MINUTES=1440`). Store in `localStorage` (acceptable for MVP; upgrade to `httpOnly` cookie for production).
-- **Passwords**: bcrypt-hashed with cost factor 12 via `passlib`.
-- **CORS**: Restricted to `CORS_ORIGINS` list. Never use `*` in production.
-- **Rate limiting**: Not implemented in MVP. Add `slowapi` or API gateway rules before production.
-- **Email hashing**: The `email` field stores the raw email in the `users` table. Hash it for GDPR compliance in production.
-- **SQL injection**: SQLAlchemy ORM parameterizes all queries.
 
 ---
 
@@ -649,7 +514,7 @@ interface VoterProfile {
 ```bash
 cd frontend
 npm install
-cp .env.example .env.local   # or create .env.local with NEXT_PUBLIC_API_URL
+cp .env.example .env.local
 npm run dev
 # http://localhost:3000
 ```
@@ -660,11 +525,8 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-# Copy and edit .env
 cp .env.example .env
-# Create tables and seed election data
 python -m app.seed
-# Start server
 uvicorn app.main:app --reload
 # http://localhost:8000/docs
 ```
@@ -675,7 +537,7 @@ docker-compose up -d
 # Frontend: http://localhost:3000
 # Backend:  http://localhost:8000/docs
 # PostgreSQL: localhost:5432
-# Then seed: docker-compose exec backend python -m app.seed
+docker-compose exec backend python -m app.seed
 ```
 
 ---
@@ -687,84 +549,22 @@ docker-compose up -d
 | `/` | Homepage / Splash screen |
 | `/auth/login` | Login page |
 | `/auth/signup` | User registration |
-| `/game` | Game hub (select level) |
+| `/game` | Game hub |
 | `/game/level/1` | Level 1 (Voter Registration) |
 | `/game/results` | Post-level results screen |
 | `/leaderboard` | Global + state rankings |
 | `/profile` | User stats & achievements |
-| `/about` | How elections work (reference) |
+| `/about` | How elections work |
 
 ---
 
-## 🧪 Testing Strategy
+## 🔒 Security Notes
 
-### Backend Tests (pytest)
-- Unit tests for scoring algorithm
-- Integration tests for game flow
-- Database transaction tests
-- API endpoint validation
-
-### Frontend Tests (Vitest)
-- Component snapshot tests
-- User interaction simulations
-- Game state transitions
-- API integration mocks
-
-### E2E Tests (Playwright)
-- Full user journey (register → play → view leaderboard)
-- State persistence
-- Error handling
-
----
-
-### Frontend (Netlify / Vercel)
-The frontend is optimized for static hosting.
-```bash
-# Build
-npm run build
-# Deploy 'out' directory to Netlify or Vercel
-```
-
-### Backend (Google Cloud Run)
-Deployed on Google Cloud Run for scalability and reliability.
-- **Service URL**: `https://votequest-api-393608700696.us-central1.run.app`
-- **Region**: `us-central1`
-- **Database**: Google Cloud SQL (PostgreSQL)
-
-### Database (Managed PostgreSQL)
-- Railway managed PostgreSQL or
-- AWS RDS PostgreSQL or
-- Heroku Postgres
-
----
-
-## 🎨 UI/UX Design System
-
-### Color Palette
-```
-Primary:     #0066CC (Democratic Blue)
-Secondary:  #E81B23 (Republican Red)
-Accent:     #FFB81C (Warning/Election Gold)
-Success:    #28A745
-Error:      #DC3545
-Neutral:    #6C757D
-Background: #FFFFFF (Light) / #1A1A1A (Dark)
-```
-
-### Typography
-- **Headings**: Inter Bold 32px/28px/24px/20px
-- **Body**: Inter Regular 16px/14px
-- **Buttons**: Inter Semibold 16px
-- **Small**: Inter Regular 12px
-
-### Component Library
-- Button (primary, secondary, danger)
-- Card (elevated, outlined)
-- Modal (dialog, alert)
-- Input (text, number, select)
-- Progress (bar, circular)
-- Toast (success, error, warning)
-- Badge (achievement, status)
+- **JWT tokens**: 24-hour expiry. Currently stored in `localStorage` (acceptable for MVP; switch to `httpOnly` cookies for production).
+- **Passwords**: bcrypt-hashed via `passlib`.
+- **CORS**: Restricted to `CORS_ORIGINS` list — never use `*` in production.
+- **Rate limiting**: Not implemented in MVP. Add `slowapi` before production.
+- **SQL injection**: SQLAlchemy ORM parameterizes all queries.
 
 ---
 
@@ -772,60 +572,42 @@ Background: #FFFFFF (Light) / #1A1A1A (Dark)
 
 By playing VoteQuest, users will understand:
 
-1. **Registration Process** - Deadlines, requirements, where to register
-2. **Eligibility** - Age, citizenship, residency requirements
-3. **Accessibility** - ADA accommodations, language assistance
-4. **Voting Methods** - Early voting, mail-in, in-person
-5. **State Variations** - Why each state has different rules
-6. **Logistics** - Why counting takes time, how audits work
-7. **Deadlines** - Why they matter and what happens if missed
-8. **Civic Responsibility** - The work behind fair elections
+1. **Registration Process** — Deadlines, requirements, where to register
+2. **Eligibility** — Age, citizenship, residency requirements
+3. **Accessibility** — ADA accommodations, language assistance
+4. **Voting Methods** — Early voting, mail-in, in-person
+5. **State Variations** — Why each state has different rules
+6. **Logistics** — Why counting takes time, how audits work
+7. **Deadlines** — Why they matter and what happens if missed
+8. **Civic Responsibility** — The work behind fair elections
 
 ---
 
-## 🚀 Future Features (Post-MVP)
+## 🚀 Future Features
 
 - [ ] Levels 2, 3, 4 fully implemented
 - [ ] Multiplayer mode (real-time challenges)
-- [ ] Teacher dashboard (organize classes, track student progress)
-- [ ] Mobile app (iOS + Android via React Native)
+- [ ] Teacher dashboard
+- [ ] Mobile app (React Native)
 - [ ] AI opponent (trivia battles, strategy)
 - [ ] Internationalization (other countries' election processes)
-- [ ] Accessibility features (screen readers, high contrast)
-- [ ] Real-time notifications
 - [ ] Social features (friend challenges, team mode)
-
----
-
-## 📝 License
-
-MIT License - See LICENSE file for details
-
----
-
-## 👥 Contributing
-
-Contributions welcome! Please see CONTRIBUTING.md for guidelines.
-
----
-
-## 📞 Contact & Support
-
-- **Email**: support@votequest.app
-- **Issues**: GitHub Issues
-- **Discussions**: GitHub Discussions
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Election Assistance Commission (EAC)
-- Rock the Vote
-- Common Cause
-- Inspired by games like Civilization and Among Us
+- [Election Assistance Commission (EAC)](https://www.eac.gov)
+- [Rock the Vote](https://www.rockthevote.org)
+- [Common Cause](https://www.commoncause.org)
+- Inspired by Civilization and Among Us
 
 ---
 
-**Last Updated**: April 25, 2026  
-**Last Updated**: May 3, 2026  
-**Version**: 1.0.0 (Production-Ready Backend)
+## 📝 License
+
+MIT License — see [LICENSE](./LICENSE) for details.
+
+---
+
+**Version**: 1.0.0
